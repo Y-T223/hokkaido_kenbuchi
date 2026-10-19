@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>剣淵町 絵本の館｜絵本のある町の、ゆっくりとした時間</title>
+<meta name="description" content="約3万5千冊の絵本と約1000点の原画を所蔵する、北海道剣淵町の絵本の館。ごっこはうすやカフェも併設し、親子でゆっくり過ごせます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2f27;        /* 深い常緑 */
+  --ink-2:#27403a;
+  --paper:#f1eee4;      /* 古紙 */
+  --paper-2:#e7e2d3;
+  --brass:#a9843f;      /* 真鍮 */
+  --brass-l:#cfb06e;
+  --wine:#5b2230;       /* 布装の赤 */
+  --text:#25302b;
+  --mute:#5d6a63;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.95;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{width:min(1040px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.5;letter-spacing:.06em}
+h2{font-size:clamp(1.55rem,3.4vw,2.1rem);color:var(--ink)}
+.sec{padding:96px 0}
+.rule{display:flex;align-items:center;gap:14px;margin:0 0 28px;color:var(--brass)}
+.rule::before,.rule::after{content:"";height:1px;background:currentColor;flex:1;max-width:72px}
+.rule i{width:7px;height:7px;background:currentColor;transform:rotate(45deg);display:block}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--ink);color:#f6f2e6;overflow:hidden}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,32,26,.88) 0%,rgba(18,32,26,.55) 55%,rgba(18,32,26,.25) 100%)}
+.hero .wrap{position:relative;z-index:1;display:flex;gap:40px;align-items:center;padding:80px 0}
+.hero h1{writing-mode:vertical-rl;font-size:clamp(2.2rem,6.4vw,4.4rem);font-weight:800;letter-spacing:.28em;line-height:1.3;border-left:1px solid var(--brass-l);padding-left:28px;animation:rise 1.4s ease both}
+.hero h1 small{display:block;font-size:.34em;font-weight:400;letter-spacing:.4em;color:var(--brass-l);margin-bottom:1.2em}
+.hero-copy{max-width:420px}
+.hero-copy p{font-family:var(--serif);font-size:clamp(1.05rem,2.2vw,1.3rem);letter-spacing:.1em;line-height:2.2}
+.hero-copy .addr{margin-top:28px;font-family:var(--sans);font-size:.9rem;letter-spacing:.05em;color:#d8d2bf}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero h1{animation:none}html{scroll-behavior:auto}}
+
+/* INTRO */
+.intro{background:var(--paper)}
+.intro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.intro p+p{margin-top:1.2em}
+.facts{display:grid;gap:0;border-top:2px solid var(--ink)}
+.facts div{display:flex;align-items:baseline;gap:18px;padding:18px 0;border-bottom:1px solid #b9b39f}
+.facts b{font-family:var(--serif);font-size:1.9rem;color:var(--wine);min-width:5.6em;font-weight:800;letter-spacing:.02em}
+.facts span{font-size:.95rem;color:var(--mute)}
+
+/* STRENGTH / FEATURE */
+.feature{background:var(--ink);color:#eee9da}
+.feature h2{color:#f6f2e6}
+.feature .split{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.frame{position:relative;padding:12px;border:1px solid var(--brass)}
+.frame img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--ink-2)}
+.feature p{margin-top:1.2em;color:#dcd6c4}
+.feature ul{list-style:none;margin-top:28px;border-top:1px solid rgba(207,176,110,.4)}
+.feature li{padding:14px 0;border-bottom:1px solid rgba(207,176,110,.4);font-family:var(--serif);letter-spacing:.08em}
+.feature li span{display:block;font-family:var(--sans);font-size:.88rem;letter-spacing:.02em;color:#c4bda8;margin-top:2px}
+
+/* HISTORY */
+.history .wrap{max-width:820px}
+.history h2{text-align:center}
+.history .rule{justify-content:center}
+.lead{margin-top:24px;text-align:center;color:var(--mute)}
+.tl{list-style:none;margin-top:52px;position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:var(--brass)}
+.tl li{position:relative;padding-bottom:36px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-34px;top:.7em;width:15px;height:15px;background:var(--paper);border:2px solid var(--brass);border-radius:50%}
+.tl time{font-family:var(--serif);font-weight:800;color:var(--wine);font-size:1.15rem;letter-spacing:.08em}
+.tl p{margin-top:4px}
+
+/* PLAY & CAFE */
+.play{background:var(--paper-2)}
+.play .split{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.play .frame{border-color:var(--ink)}
+.play p{margin-top:1.2em}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;list-style:none}
+.tags li{padding:6px 16px;border:1px solid var(--ink);font-family:var(--serif);font-size:.95rem;letter-spacing:.08em}
+
+/* REVIEWS */
+.reviews h2{text-align:center}
+.reviews .rule{justify-content:center}
+.rv{display:grid;gap:28px;margin-top:48px;grid-template-columns:1fr 1.5fr;align-items:start}
+.rv figure{background:#f9f7f0;border:1px solid #c8c1ab;padding:32px 30px;position:relative}
+.rv figure::before{content:"“";position:absolute;top:-6px;left:18px;font-family:var(--serif);font-size:4.4rem;color:var(--brass);line-height:1}
+.stars{color:var(--brass);letter-spacing:.2em;font-size:1.05rem;margin-bottom:10px}
+.rv blockquote{font-size:.97rem}
+.rv blockquote p+p{margin-top:.6em}
+.rv figcaption{margin-top:14px;font-size:.82rem;color:var(--mute)}
+
+/* INFO & MAP */
+.access{background:var(--ink);color:#eee9da}
+.access h2{color:#f6f2e6;text-align:center}
+.access .rule{justify-content:center}
+.access .grid{display:grid;grid-template-columns:1fr 1.2fr;gap:52px;margin-top:48px;align-items:start}
+dl.info{border-top:1px solid rgba(207,176,110,.5)}
+dl.info div{display:grid;grid-template-columns:6.5em 1fr;gap:12px;padding:16px 0;border-bottom:1px solid rgba(207,176,110,.5)}
+dl.info dt{font-family:var(--serif);color:var(--brass-l);letter-spacing:.1em}
+dl.info a{text-decoration:underline;text-underline-offset:4px;word-break:break-all}
+.sns{display:flex;align-items:center;gap:14px;margin-top:26px}
+.sns span{font-size:.9rem;color:#c4bda8}
+.sns a{width:48px;height:48px;border:1px solid var(--brass-l);border-radius:50%;display:grid;place-items:center;color:var(--brass-l);transition:background .2s,color .2s}
+.sns a:hover{background:var(--brass-l);color:var(--ink)}
+.sns svg{width:22px;height:22px}
+.map{border:1px solid var(--brass);padding:10px;background:var(--ink-2)}
+.map iframe{display:block;width:100%;height:380px;border:0;filter:saturate(.85)}
+.btn{display:flex;justify-content:center;align-items:center;margin-top:14px;padding:16px 24px;background:var(--brass);color:#1a251f;font-family:var(--serif);font-weight:800;letter-spacing:.14em;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--brass-l)}
+
+footer{background:#142119;color:#a9b0a4;text-align:center;padding:34px 20px;font-size:.85rem}
+footer strong{display:block;font-family:var(--serif);color:#e9e3d0;font-size:1.05rem;letter-spacing:.2em;margin-bottom:6px;font-weight:600}
+
+@media (max-width:820px){
+  .sec{padding:72px 0}
+  .hero .wrap{flex-direction:row;align-items:flex-start;gap:24px}
+  .hero h1{padding-left:18px}
+  .intro .wrap,.feature .split,.play .split,.rv,.access .grid{grid-template-columns:1fr;gap:36px}
+  .play .split .frame{order:-1}
+  .facts b{min-width:4.8em;font-size:1.6rem}
+  .map iframe{height:320px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-img"><img src="images/1.jpg" alt="北海道剣淵町の絵本の館の外観と、本棚に並ぶ絵本のイメージ"></div>
+  <div class="wrap">
+    <h1><small>北海道 剣淵町</small>剣淵町 絵本の館</h1>
+    <div class="hero-copy">
+      <p>絵本のある町で、<br>ページをめくる時間を<br>ゆっくりと。</p>
+      <p class="addr">北海道上川郡剣淵町緑町15-3</p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="sec intro" id="about">
+  <div class="wrap">
+    <div>
+      <div class="rule"><i></i></div>
+      <h2>絵本を愛する人のための、<br>町の図書館。</h2>
+      <p style="margin-top:28px">剣淵町 絵本の館は、日本最大級の絵本関連図書館です。子ども向けの絵本はもちろん、大人がじっくり読める本も揃い、世代を問わず過ごせます。</p>
+      <p>原画展や絵本まつりなどのイベントも開かれ、絵本の世界をさまざまな形で味わえます。</p>
+    </div>
+    <div class="facts" aria-label="所蔵数">
+      <div><b>約3万5千冊</b><span>絵本の所蔵数</span></div>
+      <div><b>約1,000点</b><span>絵本原画の所蔵数</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec feature" id="strength">
+  <div class="wrap split">
+    <div>
+      <div class="rule"><i></i></div>
+      <h2>本を楽しみ、<br>地域とつながる。</h2>
+      <p>館内には、軽食やスイーツを楽しめるカフェを併設。このカフェは知的障害のある方の就労支援も取り入れて運営されており、地域の福祉にもつながっています。</p>
+      <ul>
+        <li>絵本と原画の充実した所蔵<span>日本最大級の絵本関連図書館</span></li>
+        <li>原画展・絵本まつりなどのイベント<span>絵本の魅力を多彩に紹介</span></li>
+        <li>就労支援を取り入れた軽食喫茶<span>お茶の時間が、地域を支える</span></li>
+      </ul>
+    </div>
+    <div class="frame"><img src="images/2.jpg" alt="大人がゆっくり本を読める、木のぬくもりのある閲覧スペースのイメージ" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="sec history" id="history">
+  <div class="wrap">
+    <div class="rule"><i></i></div>
+    <h2>絵本の里のはじまり</h2>
+    <p class="lead">町民有志の想いから育った、剣淵の絵本文化。</p>
+    <ol class="tl">
+      <li>
+        <time>昭和63年2月</time>
+        <p>剣淵商工会青年部が児童図書編集者と出会い、「けんぶち絵本の里を創ろう会」を設立。町民有志14名で活動が始まりました。</p>
+      </li>
+      <li>
+        <time>平成3年</time>
+        <p>公民館を改修して絵本の原画や蔵書を集め、旧役場庁舎を活用した初代「絵本の館」がオープンしました。</p>
+      </li>
+      <li>
+        <time>平成16年</time>
+        <p>施設の老朽化に伴い新築され、現在の「絵本の館」となりました。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec play" id="recommend">
+  <div class="wrap split">
+    <div class="frame"><img src="images/3.jpg" alt="木製家具が並ぶ、子どものままごと遊びの小部屋ごっこはうすのイメージ" loading="lazy"></div>
+    <div>
+      <div class="rule"><i></i></div>
+      <h2>ごっこはうすと、<br>カフェのひととき。</h2>
+      <p>木製の家具を備えたままごと遊びの小部屋「ごっこはうす」では、子どもたちが思い思いにごっこ遊びを楽しめます。</p>
+      <p>本を選んだあとは、併設のカフェで軽食やスイーツを。お子さま連れでも過ごしやすい施設です。</p>
+      <ul class="tags">
+        <li>ごっこはうす</li>
+        <li>カフェ併設</li>
+        <li>親子で過ごせる</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec reviews" id="voice">
+  <div class="wrap">
+    <div class="rule"><i></i></div>
+    <h2>ご来館の声</h2>
+    <div class="rv">
+      <figure>
+        <div class="stars" aria-label="5点中5点">★★★★★</div>
+        <blockquote><p>マンホールカードいただきました。えほんが沢山展示されてました。</p></blockquote>
+        <figcaption>Googleマップのクチコミより</figcaption>
+      </figure>
+      <figure>
+        <div class="stars" aria-label="5点中5点">★★★★★</div>
+        <blockquote>
+          <p>マンホールカードをいただきたく訪問させていただきました。「絵本の館」という名称から子供向けの絵本がたくさんあるのかな..と思っていたのですが、子供だけでなく、大人向けの本、歴史、文学、文庫本、トラベル書等々メチャクチャ充実していました。</p>
+          <p>子供が遊べるスペースもある他、大人がゆっくり本を読めるスペース、そしてカフェまでありました。施設も凄く綺麗です。素晴らしいところです。思わず長居してしまいました。</p>
+          <p>マンホールカードもいただく事が出来ました。ありがとうございました。</p>
+        </blockquote>
+        <figcaption>Googleマップのクチコミより</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec access" id="access">
+  <div class="wrap">
+    <div class="rule"><i></i></div>
+    <h2>施設案内・アクセス</h2>
+    <div class="grid">
+      <div>
+        <dl class="info">
+          <div><dt>施設名</dt><dd>剣淵町 絵本の館</dd></div>
+          <div><dt>住所</dt><dd>北海道上川郡剣淵町緑町15-3</dd></div>
+          <div><dt>電話番号</dt><dd><a href="tel:0165342121">0165-34-2121</a></dd></div>
+          <div><dt>定休日</dt><dd>毎週水曜日・年末年始</dd></div>
+          <div><dt>公式HP</dt><dd><a href="https://ehon-yakata.com/" target="_blank" rel="noopener">https://ehon-yakata.com/</a></dd></div>
+        </dl>
+        <div class="sns">
+          <span>最新情報はこちら</span>
+          <a href="https://www.instagram.com/kembuchiyakata/" target="_blank" rel="noopener" aria-label="Instagram（新しいタブで開きます）">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="map">
+          <iframe title="剣淵町 絵本の館の地図" src="https://maps.google.com/maps?q=北海道上川郡剣淵町緑町15-3&amp;hl=ja&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=北海道上川郡剣淵町緑町15-3" target="_blank" rel="noopener">Googleマップで地図を開く</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>剣淵町 絵本の館</strong>
+  北海道上川郡剣淵町緑町15-3 ／ 0165-34-2121
+</footer>
+
+</body>
+</html>
